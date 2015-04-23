@@ -2,6 +2,12 @@
    Defaults
    ========================================================================== */
 
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 html {
   background: $yellow;
   color: $gray-dark;

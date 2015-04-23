@@ -29,6 +29,7 @@
 @mixin font-size-medium {
   // font-size: 112.5%;
   font-size: 125%;
+  line-height: 1.333;
 }
 @mixin font-size-regular {
   font-size: 100%;

@@ -1,0 +1,79 @@
+/* ==========================================================================
+   Review
+   ========================================================================== */
+
+.review {
+  @include card;
+
+  footer {
+    @include clearfix;
+  }
+}
+.review__content {
+  @include font-size-medium;
+
+  margin: 0 0 .75em;
+  text-align: center;
+
+  .stars {
+    margin-bottom: .667rem;
+  }
+
+  *:not(.stars) {
+    text-align: left;
+  }
+
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+.review__beer {
+  color: $gray;
+  margin: 0 0 .5em;
+
+  a {
+    color: inherit;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: $gray-darker;
+    }
+  }
+}
+.review__author {
+  @include font-size-small;
+
+  color: $gray;
+  display: block;
+  min-height: 2.5em;
+  float: left;
+  position: relative;
+  padding: .45em 0 0 3em;
+  text-decoration: none;
+  width: 60%;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $gray-darker;
+  }
+
+  img {
+    border-radius: 50%;
+    height: auto;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 2.5em;
+  }
+}
+.review__timestamp {
+  @include font-size-small;
+
+  color: $gray;
+  float: right;
+  padding: .45em 0 0;
+  text-align: right;
+  width: 40%;
+}
