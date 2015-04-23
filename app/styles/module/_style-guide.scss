@@ -8,17 +8,112 @@
  * @todo  Ignore this for production styles.
  */
 
-.style-guide__group {
-  padding: 1rem;
+$style-guide-color: #d0021b;
+
+@mixin style-guide-font {
+  font-family: 'Lucida Grande', Tahoma, sans-serif;
+  font-size: .875rem;
+  font-weight: 700;
+  line-height: 1.333;
 }
 
-.style-guide__title {
-  border-bottom: thin solid #d0021b;
-  color: #d0021b;
-  font-size: .875rem;
-  font-family: 'Lucida Grande', Tahoma, sans-serif;
-  font-weight: 700;
+/* TOC
+   ========================================================================== */
+
+.style-guide__toc {
+  @include style-guide-font;
+
+  background: $style-guide-color;
+  box-sizing: border-box;
+  color: white;
+  height: 100%;
+  left: 0;
+  padding: 20px;
+  position: fixed;
+  overflow: scroll;
+  top: 0;
+  width: 220px;
+
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    ol {
+      padding-left: 1em;
+    }
+  }
+  a {
+    color: inherit;
+    display: block;
+    text-decoration: none;
+    padding: .25em 0;
+
+    &:focus,
+    &:hover,
+    &:active {
+      opacity: .8;
+    }
+  }
+}
+
+/* Content
+   ========================================================================== */
+
+.style-guide__content {
+  padding-left: 250px;
+  padding-right: 30px;
+}
+
+.style-guide__group {
+  padding: 0 0 30px;
+}
+
+/**
+ * Headings
+ */
+.style-guide__heading,
+.style-guide__heading,
+.style-guide__heading {
+  @include style-guide-font;
+
+  color: $style-guide-color;
+}
+h1.style-guide__heading {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
+h2.style-guide__heading {
+  border-bottom: thin solid $style-guide-color;
+  font-size: 1rem;
   padding: 0 0 .25rem;
+  margin: 2rem 0;
+}
+h3.style-guide__heading {
   margin: 1rem 0;
 }
 
+/**
+ * Colors
+ */
+.style-guide__color {
+  border: 5px solid #fff;
+  display: inline-block;
+  margin: 0 .5rem 1rem 0;
+  padding-top: 100px;
+  text-align: center;
+  width: 110px;
+
+  code {
+    background: #fff;
+    display: block;
+    font-size: 75%;
+    padding: 0 0 .3rem;
+  }
+}
+.style-guide__color__name {
+  @include style-guide-font;
+
+  background: #fff;
+  padding: .5rem 0 .1rem;
+}
