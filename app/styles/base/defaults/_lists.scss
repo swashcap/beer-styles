@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+
+dl {
+  margin: 0;
+}
+dl {
+  font-style: italic;
+}
+dd {
+  font-style: normal;
+  margin: 0 0 1em;
+  padding: 0 0 0 1em;
+}
+
+ol {
+  margin: 0 0 1em;
+  padding: 0 0 0 2em;
+
+  ol,
+  ul {
+    margin-bottom: 0;
+  }
+}
+
+ul {
+  margin: 0 0 1em;
+  padding: 0 0 0 2em;
+
+  ol,
+  ul {
+    margin-bottom: 0;
+  }
+}

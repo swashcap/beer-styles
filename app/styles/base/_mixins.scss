@@ -1,0 +1,44 @@
+/* ==========================================================================
+   Mixins
+   ========================================================================== */
+
+/* Font Sizes
+   ========================================================================== */
+
+@mixin font-size-xx-large {
+  font-size: 200%;
+}
+@mixin font-size-xlarge {
+  font-size: 175%;
+  line-height: 1.15;
+}
+@mixin font-size-large {
+  font-size: 150%;
+}
+@mixin font-size-medium {
+  // font-size: 112.5%;
+  font-size: 125%;
+}
+@mixin font-size-regular {
+  font-size: 100%;
+}
+@mixin font-size-small {
+  font-size: 87.5%;
+}
+@mixin font-size-xsmall {
+  font-size: 75%;
+}
+
+
+
+@mixin card {
+  background: mix($yellow, $white);
+  margin: 0 0 1.25em;
+  max-width: 22em;
+  padding: 1.25em;
+
+  @media #{$screen-sm} {
+    margin-bottom: 1.5em;
+    padding: 1.5em;
+  }
+}

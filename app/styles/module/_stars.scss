@@ -1,0 +1,35 @@
+/* ==========================================================================
+   Stars
+   ========================================================================== */
+
+$stars-width: 100px !default;
+
+.stars {
+  display: inline-block;
+  font-size: 0;
+  height: floor($stars-width / 5);
+  line-height: 0;
+  position: relative;
+  vertical-align: middle;
+  width: $stars-width;
+
+  &:before,
+  &:after {
+    background: url(/images/stars.png) no-repeat;
+    background-size: $stars-width auto;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+  &:before {
+    background-position: 0 0;
+    width: 100%;
+  }
+  &:after {
+    background-position: 0 100%;
+    width: 50%;
+  }
+}

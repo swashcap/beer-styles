@@ -1,0 +1,40 @@
+/* ==========================================================================
+   Brewery
+   ========================================================================== */
+
+.brewery {
+  @include card;
+
+  text-align: center;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.brewery__name {
+  @include font-size-large;
+
+  font-style: italic;
+  font-weight: 400;
+  margin: 0 0 .667em;
+}
+.brewery__meta {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.brewery__meta__value {
+  @include font-size-large;
+
+  vertical-align: center;
+}
+.brewery__meta__label {
+  @include font-size-small;
+
+  color: $gray;
+  letter-spacing: .1ex;
+  text-transform: uppercase;
+  vertical-align: center;
+}

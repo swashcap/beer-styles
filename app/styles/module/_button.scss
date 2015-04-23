@@ -1,0 +1,43 @@
+/* ==========================================================================
+   Button
+   ========================================================================== */
+
+%button {
+  background: none;
+  border: 2px solid;
+  border-radius: 0;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: 700;
+  line-height: inherit;
+  text-decoration: none;
+  padding: 1em;
+}
+
+.button {
+  @extend %button;
+
+  color: $gray-dark;
+
+  &:focus,
+  &:hover {
+    background: $gray-dark;
+    border-color: $gray-dark;
+    color: $white;
+  }
+}
+.button--secondary {
+  @extend %button;
+
+  color: $gray;
+
+  &:focus,
+  &:hover,
+  &:active {
+    background: $gray;
+    border-color: $gray;
+    color: $white;
+  }
+}

@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Defaults
+   ========================================================================== */
+
+html {
+  background: $yellow;
+  color: $gray-dark;
+  font-family: $font-sans;
+}
+body {
+  font-size: 87.5%;
+  line-height: 1.5;
+
+  @media #{$screen-sm} {
+    font-size: 100%;
+    line-height: 1.45;
+  }
+  @media #{$screen-md} {
+    font-size: 112.5%;
+    line-height: 1.4;
+  }
+}
+
+a {
+  color: $gray-darker;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $red;
+  }
+}
+
+p {
+  margin: 0 0 1em;
+}

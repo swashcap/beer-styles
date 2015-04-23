@@ -1,0 +1,24 @@
+/* ==========================================================================
+   Style Guide
+   ========================================================================== */
+
+/**
+ * Styles specific to the style guide.
+ *
+ * @todo  Ignore this for production styles.
+ */
+
+.style-guide__group {
+  padding: 1rem;
+}
+
+.style-guide__title {
+  border-bottom: thin solid #d0021b;
+  color: #d0021b;
+  font-size: .875rem;
+  font-family: 'Lucida Grande', Tahoma, sans-serif;
+  font-weight: 700;
+  padding: 0 0 .25rem;
+  margin: 1rem 0;
+}
+

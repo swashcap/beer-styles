@@ -1,0 +1,25 @@
+/* ==========================================================================
+   Code
+   ========================================================================== */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: $font-mono;
+  font-weight: normal;
+  font-size: 90%;
+}
+
+pre,
+samp {
+  background: $gray-lighter;
+  display: block;
+  margin: 0 0 (1em / .9);
+
+  code {
+    font-size: 100%;
+  }
+}
+
+

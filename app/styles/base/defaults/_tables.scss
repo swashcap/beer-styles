@@ -1,0 +1,27 @@
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+
+table {
+  line-height: inherit;
+  margin: 0 0 1em;
+  width: 100%;
+}
+thead {
+  background: $gray-dark;
+  color: $yellow;
+  text-align: left;
+}
+tr {
+  // background: mix($white, $yellow);
+  border-bottom: 2px solid;
+}
+th,
+td {
+  padding: .333em .25em;
+  vertical-align: top;
+
+  @media #{$screen-sm} {
+    padding: .667em 1em;
+  }
+}

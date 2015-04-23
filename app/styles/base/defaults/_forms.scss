@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+
+label {
+  @include font-size-small;
+
+  display: block;
+}
+
+input,
+textarea {
+  background: rgba($white, .5);
+  border: none;
+  border-radius: 0;
+  color: $gray-dark;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 700;
+  line-height: inherit;
+  padding: 1em 0;
+  vertical-align: top;
+
+  &:focus,
+  &:hover {
+    background: $white;
+    color: $gray-darker;
+  }
+}
+textarea {
+  resize: vertical;
+}
