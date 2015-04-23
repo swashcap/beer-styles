@@ -79,6 +79,6 @@
   text-transform: uppercase;
 
   @media #{$screen-md} {
-    @include font-size-xsmall;
+    @include font-size-small;
   }
 }

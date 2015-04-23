@@ -93,9 +93,9 @@ h3.style-guide__heading {
   margin: 1rem 0;
 }
 
-/**
- * Colors
- */
+/* Colors
+   ========================================================================== */
+
 .style-guide__color {
   border: 5px solid #fff;
   display: inline-block;
@@ -116,4 +116,37 @@ h3.style-guide__heading {
 
   background: #fff;
   padding: .5rem 0 .1rem;
+}
+
+/* Text Sizes
+   ========================================================================== */
+
+%style-guide__text {
+  margin: 1rem 0;
+}
+
+.style-guide__text--xlarge {
+  @extend %style-guide__text;
+
+  @include font-size-xlarge;
+}
+.style-guide__text--large {
+  @extend %style-guide__text;
+
+  @include font-size-large;
+}
+.style-guide__text--medium {
+  @extend %style-guide__text;
+
+  @include font-size-medium;
+}
+.style-guide__text--regular {
+  @extend %style-guide__text;
+
+  @include font-size-regular;
+}
+.style-guide__text--small {
+  @extend %style-guide__text;
+
+  @include font-size-small;
 }
