@@ -2,40 +2,54 @@
    Forms
    ========================================================================== */
 
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
 label {
   cursor: pointer;
   display: block;
 }
 
-input,
+input[type='date'],
+input[type='datetime'],
+input[type='datetime-local'],
+input[type='email'],
+input[type='month'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='time'],
+input[type='url'],
+input[type='week'],
+input:not([type]),
 textarea {
-  background: rgba($white, .5);
-  border: 2px solid $gray-dark;
-  border-radius: 0;
-  color: $gray-dark;
-  font-size: 1rem;
-  font-family: inherit;
-  font-weight: 700;
-  line-height: inherit;
-  padding: 1em 0;
+  @include form-element;
+
+  background: $gray-lighter;
+  color: $gray-darker;
   vertical-align: top;
 
   &:focus,
   &:hover {
     background: $white;
-    color: $gray-darker;
+    color: $black;
   }
 
-  ::-webkit-input-placeholder {
+  &::-webkit-input-placeholder {
     color: $gray;
   }
-  :-moz-placeholder {
+  &:-moz-placeholder {
     color: $gray;
   }
-  ::-moz-placeholder {
+  &::-moz-placeholder {
     color: $gray;
   }
-  :-ms-input-placeholder {
+  &:-ms-input-placeholder {
     color: $gray;
   }
 }
@@ -43,10 +57,26 @@ textarea {
   resize: vertical;
 }
 
-fieldset {
-  border: none;
-  margin: 0;
-  padding: 0;
+/* Buttons
+   ========================================================================== */
+
+button,
+input[type='button'],
+input[type='submit'] {
+  @include form-button;
+}
+
+/** @todo  Remove duplicated styles from `.button--secondary` */
+input[type='reset'] {
+  @include form-button($color: mix($gray, $gray-dark));
+
+  &:focus,
+  &:hover,
+  &:active {
+    background: $gray;
+    border-color: $gray;
+    color: $black;
+  }
 }
 
 /* Custom Inputs
@@ -135,26 +165,29 @@ fieldset {
     border-width: .45em .4em 0;
     content: '';
     display: inline-block;
-    margin: -.2em 0 0;
+    margin: -.15em 0 0;
     position: absolute;
     right: .9em;
     top: 50%;
   }
 
   select {
+    @include form-element;
+
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
-    background: mix($yellow, $white);
-    border: 3px solid $gray-dark;
+    background: $gray-lighter;
+    color: $gray-darker;
     border-radius: 0;
     cursor: pointer;
     display: inline-block;
-    font-family: inherit;
-    font-size: 100%;
-    line-height: inherit;
-    padding: 1em 2.5em 1em 1em;
+    padding-right: 2.25em;
     outline: 0;
     width: 100%;
+
+    @media #{$screen-md} {
+      padding-right: 2em;
+    }
   }
 }
