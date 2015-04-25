@@ -8,17 +8,35 @@ pre,
 samp {
   font-family: $font-mono;
   font-weight: normal;
-  font-size: 90%;
+  font-size: 85%;
+
+  @media #{$screen-md} {
+    font-size: 90%;
+  }
 }
+code,
+kbd {
+  background: $gray-lighter;
+  padding: .2em .3em;
+}
+
 
 pre,
 samp {
   background: $gray-lighter;
   display: block;
-  margin: 0 0 (1em / .9);
+  margin: 0 0 (1em / .85);
+  padding: .75em 1.25em;
+
+  @media #{$screen-md} {
+    padding: (1em /.9);
+  }
 
   code {
+    background: none;
+    color: inherit;
     font-size: 100%;
+    padding: 0;
   }
 }
 
