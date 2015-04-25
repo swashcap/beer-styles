@@ -8,7 +8,7 @@
  * @todo  Ignore this for production styles.
  */
 
-$style-guide-color: #d0021b;
+$style-guide-color: #4a90e2;
 $style-guide-breakpoint: 700px;
 
 @mixin style-guide-font {
@@ -125,6 +125,25 @@ h3.style-guide__heading {
 
   background: #fff;
   padding: .5rem 0 .1rem;
+}
+
+@each $name, $color in (
+  white: $white,
+  black: $black,
+  gray-darker: $gray-darker,
+  gray-dark: $gray-dark,
+  gray: $gray,
+  gray-light: $gray-light,
+  gray-lighter: $gray-lighter,
+  yellow: $yellow,
+  orange: $orange,
+  green: $green
+) {
+  .style-guide__color--#{$name} {
+    @extend .style-guide__color;
+
+    background: $color;
+  }
 }
 
 /* Text Sizes

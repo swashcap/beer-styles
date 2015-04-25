@@ -10,7 +10,7 @@
 
 html {
   background: $yellow;
-  color: $gray-dark;
+  color: $gray-darker;
   font-family: $font-sans;
 }
 body {
@@ -28,12 +28,12 @@ body {
 }
 
 a {
-  color: $gray-darker;
+  color: $orange;
 
   &:focus,
   &:hover,
   &:active {
-    color: $red;
+    color: $black;
   }
 }
 

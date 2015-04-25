@@ -10,16 +10,19 @@ $transition-duration: 150ms;
 /* Colors
    ========================================================================== */
 
+$black:        #000000;
 $white:        #ffffff;
 
-$gray-darker:  #222222;
-$gray-dark:    #4a4a4a;
-$gray:         #808080;
-$gray-light:   #cccccc;
-$gray-lighter: #fafafa;
-
 $yellow:       #f7dd89;
-$red:          #da0089;
+$green:        #a2bd47;
+$orange:       #ed7b47;
+
+$gray-darker:  mix($black, $yellow, 75%);
+$gray-dark:    mix($black, $yellow, 50%);
+$gray:         mix($black, $yellow, 25%);
+$gray-light:   mix($white, $yellow, 25%);
+$gray-lighter: mix($white, $yellow, 50%);
+
 
 /* Media Queries
    ========================================================================== */
