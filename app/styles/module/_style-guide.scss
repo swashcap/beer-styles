@@ -9,6 +9,7 @@
  */
 
 $style-guide-color: #d0021b;
+$style-guide-breakpoint: 700px;
 
 @mixin style-guide-font {
   font-family: 'Lucida Grande', Tahoma, sans-serif;
@@ -26,13 +27,16 @@ $style-guide-color: #d0021b;
   background: $style-guide-color;
   box-sizing: border-box;
   color: white;
-  height: 100%;
   left: 0;
   padding: 20px;
-  position: fixed;
-  overflow: scroll;
   top: 0;
-  width: 220px;
+
+  @media (min-width: $style-guide-breakpoint) {
+    height: 100%;
+    overflow: scroll;
+    position: fixed;
+    width: 220px;
+  }
 
   ol {
     list-style: none;
@@ -61,8 +65,13 @@ $style-guide-color: #d0021b;
    ========================================================================== */
 
 .style-guide__content {
-  padding-left: 250px;
-  padding-right: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (min-width: $style-guide-breakpoint) {
+    padding-left: 250px;
+    padding-right: 30px;
+  }
 }
 
 .style-guide__group {
