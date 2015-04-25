@@ -225,36 +225,49 @@
     <section id="basic-elements-forms" class="style-guide__group">
       <h2 class="style-guide__heading">Forms</h2>
 
-      <label for="sample-field-1">Sample Field 1:</label>
-      <input type="text" value="Sample input" id="sample-field-1" />
+      <div>
+        <label for="sample-field-1">Sample Field:</label>
+        <input type="text" value="Sample input" id="sample-field-1" />
+      </div>
 
-      <input type="email" />
+      <div>
+        <label for="sample-field-2">Sample Text Area:</label>
+        <textarea id="sample-field-2" placeholder="Type something…"></textarea>
+      </div>
 
-      <textarea></textarea>
+      <fieldset>
+        <label class="checkbox">
+          <input type="checkbox" checked />
+          <span class="checkbox__indicator"></span>
+          I’m a checkbox
+        </label>
+        <label class="checkbox">
+          <input type="checkbox" />
+          <span class="checkbox__indicator"></span>
+          I’m another checkbox
+        </label>
+      </fieldset>
 
-      <label class="checkbox">
-        <input type="checkbox" checked />
-        <span>I’m a checkbox</span>
-      </label>
-      <label class="checkbox">
-        <input type="checkbox" />
-        <span>I’m another checkbox</span>
-      </label>
+      <fieldset>
+        <label class="radio">
+          <input type="radio" name="sample-radio" value="1" />
+          <span class="radio__indicator"></span>
+          I’m a radio button
+        </label>
+        <label class="radio">
+          <input type="radio" name="sample-radio" value="2" />
+          <span class="radio__indicator"></span>
+          I’m yet another radio button
+        </label>
+      </fieldset>
 
-      <label class="radio">
-        <input type="radio" />
-        <span>I’m a radio button</span>
-      </label>
-      <label class="radio">
-        <input type="radio" />
-        <span>I’m yet another radio button</span>
-      </label>
-
-      <select>
-        <option>Thing 1</option>
-        <option>Thing 2</option>
-        <option>Thing 3</option>
-      </select>
+      <div class="select">
+        <select>
+          <option>Thing 1</option>
+          <option>Thing 2</option>
+          <option>Thing 3</option>
+        </select>
+      </div><!-- .select -->
     </section><!-- #basic-elements-forms -->
 
   </section><!-- #basic-elements -->
