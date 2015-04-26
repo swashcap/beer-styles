@@ -30,6 +30,11 @@ $stars-width: 100px !default;
   }
   &:after {
     background-position: 0 100%;
-    width: 50%;
+  }
+}
+
+@for $i from 1 through 100 {
+  .stars[data-rating='#{$i}']:after {
+    width: 1% * $i;
   }
 }
