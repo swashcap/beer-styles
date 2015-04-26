@@ -1,9 +1,0 @@
-{
-  "name": "embeer-styles",
-  "private": true,
-  "dependencies": {
-    "modernizr": "~2.8.1",
-    "normalize-scss": "~3.0.2",
-    "jquery": "~2.1.3"
-  }
-}

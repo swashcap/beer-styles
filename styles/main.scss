@@ -1,6 +1,9 @@
-// bower:scss
-@import "bower_components/normalize-scss/_normalize.scss";
-// endbower
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+@import 'vendor/normalize';
 
 @import 'base/variables';
 @import 'base/mixins';
