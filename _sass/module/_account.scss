@@ -1,0 +1,137 @@
+/* ==========================================================================
+   Account
+   ========================================================================== */
+
+$account-transition-duration: 100ms !default;
+
+.account {
+  font-weight: 700;
+  position: relative;
+  text-align: center;
+  transition: background $account-transition-duration;
+
+  @media #{$screen-md} {
+    max-width: 18em;
+  }
+}
+
+/* Trigger
+   ========================================================================== */
+
+.account__trigger {
+  color: $gray-darker;
+  display: block;
+  position: relative;
+  padding: .5em 4em;
+  text-decoration: none;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $orange;
+
+    &:after {
+      border-top-color: $orange;
+    }
+  }
+
+  &:after {
+    border-color: $gray-dark transparent transparent;
+    border-style: solid;
+    border-width: .5em .4em 0;
+    content: '';
+    display: inline-block;
+    margin: -.15em 0 0;
+    position: absolute;
+    right: 1em;
+    transition: transform $account-transition-duration;
+    top: 50%;
+  }
+}
+.account__avatar {
+  border-radius: 50%;
+  height: auto;
+  display: block;
+  left: .5em;
+  opacity: .8;
+  position: absolute;
+  top: .5em;
+  transition: opacity $account-transition-duration;
+  width: 3em;
+}
+.account__name {
+  display: inline-block;
+  line-height: 3;
+}
+
+/* Menu
+   ========================================================================== */
+
+.account__menu {
+  background: rgba($black, .75);
+  left: 0;
+  list-style: none;
+  opacity: 0;
+  padding: 0 0 .5em;
+  position: absolute;
+  text-align: center;
+  top: 4em;
+  transition:
+    opacity $account-transition-duration,
+    visibility 0ms $account-transition-duration;
+  visibility: hidden;
+  width: 100%;
+  z-index: 1000;
+
+  a {
+    color: rgba($white, .8);
+    display: block;
+    padding: 1em 0;
+    transform: translateY(1em);
+    transition:
+      opacity $account-transition-duration,
+      transform $account-transition-duration;
+    opacity: 0;
+    text-decoration: none;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background: $black;
+      color: $white;
+    }
+  }
+}
+
+/**
+ * 'Open' state.
+ */
+.is-open.account {
+  background: rgba($black, .75);
+
+  .account__trigger {
+    color: rgba($white, .5);
+
+    &:after {
+      border-top-color: rgba($white, .5);
+      transform: rotate(180deg);
+    }
+  }
+  .account__avatar {
+    opacity: 1;
+  }
+
+  .account__menu {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity $account-transition-duration;
+
+    a {
+      opacity: 1;
+      transform: translateY(0);
+      transition:
+        opacity $account-transition-duration $account-transition-duration,
+        transform $account-transition-duration $account-transition-duration;
+    }
+  }
+}

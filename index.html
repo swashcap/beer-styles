@@ -243,33 +243,37 @@ myArea.innerText = 'Testing!';
 <section id="components" class="style-guide__group">
   <h1 class="style-guide__heading">Components</h1>
 
-  <section id="components-header" class="style-guide__group">
-    <h2 class="style-guide__heading">Header</h2>
+  <section id="components-account-area" class="style-guide__group">
+    <h2 class="style-guide__heading">Account Area</h2>
 
-    <header class="site-header" role="banner">
-      <nav role="navigation">
-        <a href="#" class="site-header__home-link" rel="home">Embeer Styles</a>
-        <ul class="">
-          <li><a href="#">Link 1</a></li>
-          <li><a href="#">Link 2</a></li>
-          <li><a href="#">Link 3</a></li>
-        </ul>
-      </nav>
       <div class="account">
-        <button class="button">Add Review</button>
-        <div>
-          <a href="#">
-            <img src="images/sample-profile-1.jpg" />
-            <span>User Name</span>
-          </a>
-          <ul>
-            <li><a href="#">My Reviews</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Log Out</a></li>
-          </ul>
-        </div>
-      </div>
-    </header><!-- .site-header -->
+        <a
+          href="#account-links"
+          id="account-links-label"
+          class="account__trigger"
+          role="button"
+          aria-haspopup="true"
+          aria-expanded="false">
+          <img src="images/sample-profile-1.jpg" class="account__avatar" alt="User Name" />
+          <span class="account__name">User Name</span>
+        </a>
+        <ul
+          id="account-links"
+          class="account__menu"
+          role="menu"
+          aria-labelledby="account-links-label">
+          <li role="presentation">
+            <a href="#" role="menuitem" tabindex="-1">My Reviews</a>
+          </li>
+          <li role="presentation">
+            <a href="#" role="menuitem" tabindex="-1">Settings</a>
+          </li>
+          <li role="presentation">
+            <a href="#" role="menuitem" tabindex="-1">Log Out</a>
+          </li>
+        </ul>
+      </div><!-- .account -->
+
   </section><!-- #components-header -->
 
   <section id="components-review" class="style-guide__group">
