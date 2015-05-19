@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Autocomplete Field
+   ========================================================================== */
+
+.autocomplete-field {
+  position: relative;
+}
+.autocomplete-field__input {
+  padding-right: 2.5em !important;
+  width: 100%;
+}
+.autocomplete-field__clear {
+  color: $gray-dark;
+  border-color: transparent;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  &:focus,
+  &:hover,
+  &:active {
+    background: none;
+    border-color: transparent;
+    color: $black;
+  }
+}

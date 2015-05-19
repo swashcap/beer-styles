@@ -16,16 +16,18 @@
 @import 'base/defaults/tables';
 
 @import 'module/account';
+@import 'module/autocomplete-field';
 @import 'module/beer';
 @import 'module/brewery';
 @import 'module/button';
 @import 'module/filters';
+@import 'module/new-beer-form';
 @import 'module/review';
 @import 'module/site-header';
 @import 'module/stars';
 @import 'module/style-guide';
 @import 'module/tags';
-
+@import 'module/typeahead';
 
 .browserupgrade {
   margin: 0.2em 0;

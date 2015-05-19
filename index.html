@@ -518,12 +518,18 @@ myArea.innerText = 'Testing!';
   <section id="pieces-new-form">
     <h2 class="style-guide__heading">New Form</h2>
 
-    <form>
+    <form class="new-beer-form">
       <label for="review-form-beer">Beer:</label>
       <input type="text" name="beer" id="review-form-beer" />
 
       <label for="review-form-brewery">Brewery:</label>
-      <input type="text" name="brewery" id="review-form-brewery" />
+
+      <div class="autocomplete-field">
+        <input type="text" name="brewery" id="review-form-brewery" class="autocomplete-field__input" />
+        <button type="button" class="autocomplete-field__clear" aria-label="Clear field">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
 
       <fieldset>
         <legend>Style</legend>
@@ -551,23 +557,28 @@ myArea.innerText = 'Testing!';
         <input type="number" min="0" step="1" id="review-form-ibu" />
       </div>
 
-      <fieldset>
+      <fieldset class="new-beer-form__rating">
         <legend>Rating</legend>
 
-        <label>
+        <label class="radio">
           <input type="radio" name="rating" value="1" /> 1
+          <span class="radio__indicator"></span>
         </label>
-        <label>
+        <label class="radio">
           <input type="radio" name="rating" value="2" /> 2
+          <span class="radio__indicator"></span>
         </label>
-        <label>
+        <label class="radio">
           <input type="radio" name="rating" value="3" /> 3
+          <span class="radio__indicator"></span>
         </label>
-        <label>
+        <label class="radio">
           <input type="radio" name="rating" value="4" /> 4
+          <span class="radio__indicator"></span>
         </label>
-        <label>
+        <label class="radio">
           <input type="radio" name="rating" value="5" /> 5
+          <span class="radio__indicator"></span>
         </label>
       </fieldset>
 

@@ -30,6 +30,9 @@ input:not([type]),
 textarea {
   @include form-element;
 
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: $gray-lighter;
   color: $gray-darker;
   vertical-align: top;
@@ -167,6 +170,7 @@ input[type='reset'] {
     display: inline-block;
     margin: -.15em 0 0;
     position: absolute;
+    pointer-events: none;
     right: .9em;
     top: 50%;
   }

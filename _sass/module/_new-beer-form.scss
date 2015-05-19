@@ -1,0 +1,37 @@
+/* ==========================================================================
+   New Beer Form
+   ========================================================================== */
+
+/* Rating
+   ========================================================================== */
+
+.new-beer-form__rating {
+  legend {
+    display: block;
+  }
+  .radio {
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    padding: .25rem;
+    position: static;
+
+    &:hover .radio__indicator {
+      background-position: 0 -2.5rem;
+    }
+  }
+  .radio__indicator {
+    background: url(../images/stars.png) no-repeat;
+    background-position: 0 0;
+    background-size: 12.5rem auto;
+    border: none;
+    border-radius: 0;
+    height: 2.5rem;
+    position: static;
+    width: 2.5rem;
+
+    &:before {
+      display: none;
+    }
+  }
+}
